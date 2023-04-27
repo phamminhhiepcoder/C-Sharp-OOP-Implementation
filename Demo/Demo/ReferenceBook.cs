@@ -8,17 +8,21 @@ namespace Demo
 {
     class ReferenceBook : Book
     {
-        private string major;
+        private string major { get; set; }
 
         public ReferenceBook(int id, string title, string authorName, List<string> languages, int year, int quantity, bool available, string major) : base(id, title, authorName, languages, year, quantity, available)
         {
             this.major = major;
         }
 
-        public void showInfo()
+        public override void showInfo()
         {
-            Book.showInfo();
-            Console.Write(", major {1}", major);
+            Console.Write("This reference book has major {1}", major);
+        }
+
+        public override string ToString()
+        {
+            return base.ToString() + "major: " + major;
         }
     }
 }

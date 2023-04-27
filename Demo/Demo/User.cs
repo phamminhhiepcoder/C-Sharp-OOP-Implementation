@@ -8,7 +8,9 @@ namespace Demo
 {
     abstract class User
     {
-        private int id
+        private int id;
+
+        private int Id
         {
             get
             {
@@ -30,6 +32,19 @@ namespace Demo
         private string username { get; set; }
         private string password { get; set; }
 
+        public User(int id, string fullName, string username, string password)
+        {
+            this.id = id;
+            this.fullName = fullName;
+            this.username = username;
+            this.password = password;
+        }
+
         public abstract void showRole();
+
+        public override string ToString()
+        {
+            return "User: \n" + "  id: " + id + "\n  full name: " + fullName + "\n  username: " + username + "\n  password: " + password + "\n";  
+        }
     }
 }

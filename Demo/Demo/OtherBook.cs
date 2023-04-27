@@ -8,17 +8,21 @@ namespace Demo
 {
     class OtherBook : Book
     {
-        private string type;
+        private string type { get; set; }
 
         public OtherBook(int id, string title, string authorName, List<string> languages, int year, int quantity, bool available, string type) : base(id, title, authorName, languages, year, quantity, available)
         {
             this.type = type;   
         }
 
-        public void showInfo()
+        public override void showInfo()
         {
-            Book.showInfo();
-            Console.Write(", type {1}", type);
+            Console.Write(" This other book has type {1}", type);
+        }
+
+        public override string ToString()
+        {
+            return base.ToString() + "type: " + type;
         }
     }
 }

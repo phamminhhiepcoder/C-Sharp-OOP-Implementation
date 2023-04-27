@@ -6,3 +6,11 @@ C:\Users\Administrator\Desktop\Demo\Demo\obj\Debug\Demo.csproj.SuggestedBindingR
 C:\Users\Administrator\Desktop\Demo\Demo\obj\Debug\Demo.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\Desktop\Demo\Demo\obj\Debug\Demo.exe
 C:\Users\Administrator\Desktop\Demo\Demo\obj\Debug\Demo.pdb
+C:\Users\Administrator\Desktop\C# OOP Demo\C-Sharp-OOP-Implementation\Demo\Demo\obj\Debug\Demo.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\C# OOP Demo\C-Sharp-OOP-Implementation\Demo\Demo\obj\Debug\Demo.csproj.SuggestedBindingRedirects.cache
+C:\Users\Administrator\Desktop\C# OOP Demo\C-Sharp-OOP-Implementation\Demo\Demo\obj\Debug\Demo.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\C# OOP Demo\C-Sharp-OOP-Implementation\Demo\Demo\obj\Debug\Demo.exe
+C:\Users\Administrator\Desktop\C# OOP Demo\C-Sharp-OOP-Implementation\Demo\Demo\obj\Debug\Demo.pdb
+C:\Users\Administrator\Desktop\C# OOP Demo\C-Sharp-OOP-Implementation\Demo\Demo\bin\Debug\Demo.exe.config
+C:\Users\Administrator\Desktop\C# OOP Demo\C-Sharp-OOP-Implementation\Demo\Demo\bin\Debug\Demo.exe
+C:\Users\Administrator\Desktop\C# OOP Demo\C-Sharp-OOP-Implementation\Demo\Demo\bin\Debug\Demo.pdb

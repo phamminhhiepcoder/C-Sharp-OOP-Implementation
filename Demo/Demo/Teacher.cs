@@ -8,7 +8,14 @@ namespace Demo
 {
     class Teacher : User
     {
-        private int yearsOfExperience
+        private int yearsOfExperience;
+
+        public Teacher(int id, string fullName, string username, string password, int yearsOfExperience) : base(id, fullName, username, password)
+        {
+            this.yearsOfExperience = yearsOfExperience;
+        }
+
+        private int YearsOfExperience
         {
             get
             {
@@ -29,7 +36,12 @@ namespace Demo
 
         public override void showRole()
         {
-            Console.WriteLine("This user is a teacher and has {1} years of experience!", yearsOfExperience);
+            Console.WriteLine("This user is a teacher and has {0} years of experience!", yearsOfExperience);
+        }
+
+        public override string ToString()
+        {
+            return base.ToString() + "Role: teacher\nyears of experience: " + yearsOfExperience;
         }
     }
 }

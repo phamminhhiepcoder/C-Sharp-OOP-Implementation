@@ -8,9 +8,9 @@ namespace Demo
 {
     class ClassBook : Book
     {
-        
+        private int grade;
 
-        private int grade
+        private int Grade
         {
             get
             {
@@ -36,13 +36,26 @@ namespace Demo
         }
 
 
-
-        public void showInfo()
+        public override void showInfo()
         {
-            Book.showInfo();
-            Console.Write(", grade {1}, subjects: {2}", grade, subjects);
+            string list = "";
+            foreach(string x in subjects)
+            {
+                list += x + ", ";
+            }
+            list = list.Substring(0, list.Length - 2);
+            Console.WriteLine("This classbook is used for grade {0}, about subjects: {1}", grade, list);
         }
-        
 
+        public override string ToString()
+        {
+            string listOfSubjects = "";
+            foreach (string x in subjects)
+            {
+                listOfSubjects += x + ", ";
+            }
+            listOfSubjects = listOfSubjects.Substring(0, listOfSubjects.Length - 2);
+            return base.ToString() + "grade: " + grade + "\nsubjects: " + listOfSubjects;     
+        }
     }
 }

@@ -6,9 +6,18 @@ using System.Threading.Tasks;
 
 namespace Demo
 {
-    abstract class Book
+    class Book
     {
-        private int id
+        private int id;
+        private string title { get; set; }
+        private string authorName { get; set; }
+        private List<string> languages { get; set; }
+        private int year;
+        private int quantity;
+        private bool available { get; set; }
+
+
+        private int Id
         {
             get
             {
@@ -26,10 +35,8 @@ namespace Demo
                 }
             }
         }
-        private string title { get; set; }
-        private string authorName { get; set; }
-        private List<string> languages { get; set; }
-        private int year
+       
+        private int Year
         {
             get
             {
@@ -47,7 +54,7 @@ namespace Demo
                 }
             }
         }
-        private int quantity
+        private int Quantity
         {
             get
             {
@@ -65,7 +72,6 @@ namespace Demo
                 }
             }
         } 
-        private bool available { get; set; }
 
         public Book(int id, string title, string authorName, List<string> languages, int year, int quantity, bool available)
         {
@@ -78,9 +84,20 @@ namespace Demo
             this.available = available;
         }
 
-        public static void showInfo()
+        public virtual void showInfo()
         {
-            Console.Write("This book has id {1}, title {2}, author {3}, languages: {4}, year {5}, quantity: {6}, available: {7}",getId(), title, authorName, languages, year, quantity, available );
+            Console.Write("This book has id {1}, title {2}, author {3}, languages: {4}, year {5}, quantity: {6}, available: {7}", id, title, authorName, languages, year, quantity, available);
+        }
+
+        public override string ToString()
+        {
+            string listOfLanguages = "";
+            foreach(string x in languages)
+            {
+                listOfLanguages += x + ", ";
+            }
+            listOfLanguages = listOfLanguages.Substring(0, listOfLanguages.Length - 2);
+            return "Book: \n" + "id: " + id + "\ntitle: " + title + "\n author's name: " + authorName + "\nLanguages: " + listOfLanguages + "\nyear: " + year + "\nquantity: " + quantity + "\navailable: " + available + "\n";
         }
     }
 }
